@@ -7,13 +7,16 @@ import {Switch, Route } from 'react-router-dom';
 class App extends React.Component {
   render() {
     return (
-        <Switch>
+      <div>
+          <Switch>
           <Route exact path="/">
           </Route>
           <Route exact path="/login">
           </Route>
           </Switch>
 
+      </div>
+        
 
     );
   }
