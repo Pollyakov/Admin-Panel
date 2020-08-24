@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Switch, Route } from 'react-router-dom';
+import {Switch, Route, HashRouter } from 'react-router-dom';
 import Login from './Pages/Login';
 import Dashboard from './Pages/Dashboard';
 import Statistics from './Pages/Statistics';
@@ -10,21 +9,22 @@ import Statistics from './Pages/Statistics';
 class App extends React.Component {
   render() {
     return (
-      <div>
+     
+        <HashRouter>
           <Switch>
             <Route exact path="/">
-               <Login/>
+               <Login />
             </Route>
-            <Route exact path="/login">
-              <Dashboard/>
+            <Route exact path="/dashboard">
+              <Dashboard />
             </Route>
-            <Route exact path="/">
+            <Route exact path="/statistics">
                 <Statistics/>
-               <Login/>
             </Route>
-          </Switch>
+           </Switch>
+          </HashRouter>
 
-      </div>
+   
         
 
     );

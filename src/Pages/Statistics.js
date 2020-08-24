@@ -4,7 +4,7 @@ class Statistics extends Component {
     render() {
         return (
             <div>
-                Statistics
+                Tyt budut Statistics.
             </div>
         );
     }
