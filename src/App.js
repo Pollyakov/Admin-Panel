@@ -5,12 +5,10 @@ import { Tab, TabPanel, Tabs, TabList } from "react-web-tabs";
 import ReactDOM from "react-dom";
 import "react-web-tabs/dist/react-web-tabs.css";
 
-
-import { Switch, Route, HashRouter } from 'react-router-dom';
-import Dashboard from './Pages/Dashboard';
-import Statistics from './Pages/Statistics';
+// import { Switch, Route, HashRouter } from 'react-router-dom';
+// import Dashboard from './Pages/Dashboard';
+// import Statistics from './Pages/Statistics';
 import UserManagement from './Pages/UserManagement';
-
 
 class App extends React.Component {
   render() {
@@ -31,12 +29,9 @@ class App extends React.Component {
       </TabPanel>
 
       <TabPanel tabId="vertical-tab-three">
-        <p>User Management content</p>  
+        <p><UserManagement/></p>  
       </TabPanel>
     </Tabs>
-      
-     
-
     );
   }
 }
