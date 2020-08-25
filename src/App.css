@@ -1,0 +1,10 @@
+.tabs {
+      display: flex;
+      flex-direction: column;
+      
+      width: 150px;
+}
+.window
+{
+    background-color: blue;
+}
