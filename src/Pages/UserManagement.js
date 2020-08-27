@@ -1,44 +1,27 @@
 import React, { Component } from 'react';
 import {Container, Table} from 'react-bootstrap'
-
+import BootstrapTable from 'react-bootstrap-table-next';
 
 import axios from 'axios';
 class UserManagement extends React.Component {
 
     constructor(props) {
         super(props);
-        
         this.state = {
             users: []
           }
-        // redirectIndex - number - using this state in the render function 
-        //  in order to decided if to redirect or not. If value is -1 not redirecting.
-        //  otherwise redirecting to '/cars/${redirectIndex}'
-        // this.state = {
-        //     redirectIndex: -1
-        // }
-        // this.openCar = this.openCar.bind(this);
     }
 
-
-
     componentDidMount() {
-
     axios.get("https://tabsur.herokuapp.com/api/system/users").then(response => {
-      // console.log(response.data);
       this.setState({
         users: response.data
       })
-      console.log(response.data);
     })
-
   }
 
     render() {
-        // if (this.state.redirectIndex !== -1) {
-        //     const redirectPath = `/cars/${this.state.redirectIndex}`
-        //     return <Redirect to={redirectPath}/>
-        // }
+
         let contentToRender;
             const userTableRows = this.state.users.map((user, index) =>
                 <tr >
@@ -49,31 +32,34 @@ class UserManagement extends React.Component {
                     <td>{JSON.stringify(user.location)}</td>
                 </tr>);
 
-            contentToRender =                 
-                <Table>
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Created</th>
-                            <th>Email</th>
-                            <th>Location</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {userTableRows}
-                    </tbody>
-                </Table>
+        const columns = [{
+            dataField: 'id',
+            text: 'user ID',
+            sort: true
+          },{
+            dataField: 'name',
+            text: 'User Name',
+            sort: true
+          },
+          {
+            dataField: 'created_at',
+            text: 'Creation Date',
+            sort: true
+          },
+          {
+            dataField: 'email',
+            text: 'User email',
+            sort: true
+          }];
 
-        // } else {
-        //     // I don't have cars render a message
-        //     contentToRender = 
-        //         <p style={{textAlign: "center"}}>No Cars to Show</p>
-        // 
+          const selectRow = {
+            mode: 'checkbox',
+            clickToSelect: true
+          };
 
         return (
             <Container>
-                {contentToRender}
+                <BootstrapTable keyField='id' data={ this.state.users } columns={ columns} selectRow={ selectRow } />
             </Container>        
         );
     }
