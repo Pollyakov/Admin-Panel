@@ -9,6 +9,7 @@ import "react-web-tabs/dist/react-web-tabs.css";
 // import Dashboard from './Pages/Dashboard';
 // import Statistics from './Pages/Statistics';
 import UserManagement from './Pages/UserManagement';
+import MealsManagement from './Pages/MealsManagement';
 
 class App extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class App extends React.Component {
         <Tab tabFor="vertical-tab-one">Dashboard</Tab>
         <Tab tabFor="vertical-tab-two">Statistics</Tab>
         <Tab tabFor="vertical-tab-three">User Management</Tab>
+        <Tab tabFor="vertical-tab-three">Meals Management</Tab>
       </TabList>
 
       <TabPanel tabId="vertical-tab-one">
@@ -26,6 +28,10 @@ class App extends React.Component {
 
       <TabPanel tabId="vertical-tab-two">
         <p>Statistics content</p>
+      </TabPanel>
+
+      <TabPanel tabId="vertical-tab-two">
+        <p><MealsManagement/></p>
       </TabPanel>
 
       <TabPanel tabId="vertical-tab-three">
