@@ -22,16 +22,6 @@ class UserManagement extends React.Component {
 
     render() {
 
-        let contentToRender;
-            const userTableRows = this.state.users.map((user, index) =>
-                <tr >
-                    <td>{user.id}</td>
-                    <td>{user.name}</td>
-                    <td>{user.created_at}</td>
-                    <td>{user.email}</td>
-                    <td>{JSON.stringify(user.location)}</td>
-                </tr>);
-
         const columns = [{
             dataField: 'id',
             text: 'user ID',
