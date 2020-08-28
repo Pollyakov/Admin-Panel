@@ -11,8 +11,7 @@ class Statistics extends Component {
   <Card.Body>
     <Card.Title>Users Today</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      Active users and New users today
     </Card.Text>
     <Button variant="primary">Click me</Button>
   </Card.Body>
@@ -21,8 +20,7 @@ class Statistics extends Component {
   <Card.Body>
     <Card.Title>Meals today</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+       Meals today and Meals created
     </Card.Text>
     <Button variant="primary">Click me</Button>
   </Card.Body>

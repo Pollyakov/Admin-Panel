@@ -12,6 +12,7 @@ import UserManagement from './Pages/UserManagement';
 import MealsManagement from './Pages/MealsManagement';
 import Notifications from './Pages/Notifications';
 import LogPanel from './Pages/LogPanel';
+import ServerInfo from './Pages/ServerInfo';
 
 
 class App extends React.Component {
@@ -25,6 +26,7 @@ class App extends React.Component {
         <Tab tabFor="vertical-tab-four">Meals Management</Tab>
         <Tab tabFor="vertical-tab-five">Log Panel</Tab>
         <Tab tabFor="vertical-tab-six">Notifications</Tab>
+        <Tab tabFor="vertical-tab-seven">Server Info</Tab>
       </TabList>
 
       <TabPanel tabId="vertical-tab-one">
@@ -49,6 +51,10 @@ class App extends React.Component {
 
       <TabPanel tabId="vertical-tab-six">
         <p><Notifications/></p>
+      </TabPanel>
+
+      <TabPanel tabId="vertical-tab-seven">
+        <p><ServerInfo/></p>
       </TabPanel>
 
     
