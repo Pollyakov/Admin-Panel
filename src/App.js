@@ -11,6 +11,7 @@ import "react-web-tabs/dist/react-web-tabs.css";
 import UserManagement from './Pages/UserManagement';
 import MealsManagement from './Pages/MealsManagement';
 import Notifications from './Pages/Notifications';
+import LogPanel from './Pages/LogPanel';
 
 
 class App extends React.Component {
@@ -43,7 +44,7 @@ class App extends React.Component {
       </TabPanel>
 
       <TabPanel tabId="vertical-tab-five">
-        <p>Log Panel</p>
+        <p><LogPanel/></p>
       </TabPanel>
 
       <TabPanel tabId="vertical-tab-six">
