@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container, Table } from "react-bootstrap";
 import BootstrapTable from "react-bootstrap-table-next";
-
 import axios from "axios";
 
 class MealsManagement extends React.Component {
