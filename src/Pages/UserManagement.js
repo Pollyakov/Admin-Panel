@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Table } from "react-bootstrap";
+import { Container, Table, Col, Button } from "react-bootstrap";
 import BootstrapTable from "react-bootstrap-table-next";
 
 import axios from "axios";
@@ -52,7 +52,14 @@ class UserManagement extends React.Component {
     };
 
     return (
+      
+     
       <Container>
+       <h3>User Management Page </h3>
+      <Button as="input" type="reset" value="Delete" />
+      <Button as="input" type="reset" value="Rename" />
+      <Button as="input" type="reset" value="Set Password" />
+      <Button as="input" type="reset" value="Send email" />
         <BootstrapTable
           keyField="id"
           data={this.state.users}
@@ -60,8 +67,9 @@ class UserManagement extends React.Component {
           selectRow={selectRow}
         />
       </Container>
+     
     );
   }
-}
+} 
 
 export default UserManagement;
