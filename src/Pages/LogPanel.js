@@ -13,6 +13,10 @@ class LogPanel extends Component {
     <Card.Text>
       Log log log  log loglog loglog loglog loglog loglog log
       log loglog loglog loglog loglog loglog loglog log
+      Log log log  log loglog loglog loglog loglog loglog log
+      log loglog loglog loglog loglog loglog loglog log
+      Log log log  log loglog loglog loglog loglog loglog log
+      log loglog loglog loglog loglog loglog loglog log
     </Card.Text>
     <Button variant="primary">Clear</Button>
   </Card.Body>

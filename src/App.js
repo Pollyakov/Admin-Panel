@@ -7,7 +7,7 @@ import "react-web-tabs/dist/react-web-tabs.css";
 
 // import { Switch, Route, HashRouter } from 'react-router-dom';
 // import Dashboard from './Pages/Dashboard';
-// import Statistics from './Pages/Statistics';
+import Statistics from './Pages/Statistics';
 import UserManagement from './Pages/UserManagement';
 import MealsManagement from './Pages/MealsManagement';
 import Notifications from './Pages/Notifications';
@@ -32,7 +32,7 @@ class App extends React.Component {
       </TabPanel>
 
       <TabPanel tabId="vertical-tab-two">
-        <p>Statistics content</p>
+        <p><Statistics/></p>
       </TabPanel>
 
       <TabPanel tabId="vertical-tab-three">
